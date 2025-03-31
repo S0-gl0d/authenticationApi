@@ -53,7 +53,7 @@ class UserViewLogout(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-         request.user.auth_token.delete() # return errror but maybe I just post wrong data dsdsd
+         request.user.auth_token.delete()
 
          return Response({'message': 'Successfully logout'})
           

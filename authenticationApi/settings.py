@@ -78,12 +78,13 @@ WSGI_APPLICATION = 'authenticationApi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'authen_db', # This is where you put the name of the db file. 
-                 # If one doesn't exist, it will be created at migration time.
-    }
-}
-
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'authen_db_test',
+        'PASSWORD': 'root',
+        'USER': 'postgres',
+        'HOST': 'host.docker.internal',
+        'PORT': '5432',
+}}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
